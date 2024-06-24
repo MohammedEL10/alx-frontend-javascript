@@ -1,1 +1,2 @@
-const a = taskFirst ;
+const taskFirst ;
+let taskNext ;
