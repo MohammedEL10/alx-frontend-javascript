@@ -1,4 +1,3 @@
-
 export function uploadPhoto() {
   return Promise.resolve({
     status: 200,
@@ -6,9 +5,10 @@ export function uploadPhoto() {
   });
 }
 
+
 export function createUser() {
   return Promise.resolve({
-    firstName: 'mohammed',
-    lastName: 'el-hathout',
+    firstName: 'Guillaume',
+    lastName: 'Salva',
   });
 }
