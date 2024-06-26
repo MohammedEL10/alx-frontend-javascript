@@ -1,9 +1,21 @@
-{
-  photo: response_from_uploadPhoto_function,
-  user: response_from_createUser_function,
-}
+import { uploadPhoto, createUser } from 'utils.js';
 
-{
-  photo: null,
-  user: null,
-}
+const asyncUploadUser = async () => {
+  try {
+    const photo = await uploadPhoto();
+    const user = await createUser();
+
+    return {
+      photo,
+      user,
+    };
+  } catch (error) {
+    return {
+      photo: null,
+      user: null,
+    };
+  }
+};
+
+// Usage
+asyncUploadUser().then(result => console.log(result));
